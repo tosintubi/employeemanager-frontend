@@ -11,7 +11,13 @@ export class EmployeeService {
 
     constructor(private http: HttpClient) {} 
     
+    //Fetch list of all employees
     public getEmployees(): Observable<Employee[]> {
-        return this.http.get<Employee[]>(`${this.apiServerUrl}/employee/all`)
+        return this.http.get<Employee[]>(`${this.apiServerUrl}/employee/all`);
+    }
+
+    // Adds a single employee to the database
+    public addEmployee(employee: Employee): Observable<Employee> {
+        return this.http.post<Employee>(`${this.apiServerUrl}/employee/add`,employee);
     }
 }
