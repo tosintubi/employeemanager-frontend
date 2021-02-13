@@ -12,8 +12,7 @@ import { EmployeeService } from './employee.service';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
-    HttpHeaderResponse
+    HttpClientModule
   ],
   providers: [EmployeeService],
   bootstrap: [AppComponent]
